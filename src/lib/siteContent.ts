@@ -76,7 +76,7 @@ export const siteContent = {
         price: 18,
         category: "Appetizer" as const,
         dietaryTags: ["Gluten-free"],
-        image: "https://images.unsplash.com/photo-1559395338-d52da395d5b3?auto=format&fit=crop&w=1600&q=80"
+        image: "https://www.inspiredtaste.net/wp-content/uploads/2018/08/Pan-Seared-Scallops-Recipe-1200.jpg"
       },
       {
         id: "2",
@@ -241,45 +241,59 @@ export const siteContent = {
     sections: [
       {
         title: "Delivery Platforms",
-        description: "Find us on Uber Eats, DoorDash, and Grubhub. Full menu available with real-time updates.",
-        cta: "View on platforms"
+        description: "Find us on Uber Eats, DoorDash, and Grubhub. Full menu available with real-time updates and accurate prep times."
       },
       {
-        title: "White-Label Catering",
-        description: "Restaurant owner? We can prepare your recipes at scale for delivery and catering. Maintain your brand, leverage our kitchen.",
-        cta: "Contact us"
+        title: "Corporate Catering",
+        description: "Weekly meal programs for offices and teams. Volume discounts and customizable menus available."
+      },
+      {
+        title: "White-Label Kitchen",
+        description: "Licensed commercial kitchen space available for restaurants without delivery infrastructure. We handle prep, packaging, and logistics."
       }
-    ]
+    ],
+    cta: {
+      label: "Discuss Partnership",
+      whatsappNumber: "1234567890",
+      whatsappMessage: "Hi, I'm interested in partnership opportunities with Cloud Kitchen"
+    }
   },
 
   contact: {
-    headline: "Get in touch",
-    subtext: "Questions about our menu, dietary accommodations, or bulk orders? We're here to help.",
-    whatsapp: {
-      label: "Message us on WhatsApp",
+    headline: "Ready to order?",
+    subtext: "Message us on WhatsApp or find us on your favorite delivery platform",
+    whatsappCta: {
+      label: "Order on WhatsApp",
       number: "1234567890",
-      message: "Hi, I have a question about Cloud Kitchen"
+      message: "Hi, I'd like to order from your menu"
     },
-    email: "hello@cloudkitchen.example",
-    phone: "(555) 123-4567",
-    hours: {
-      weekday: "Monday – Friday: 11am – 10pm",
-      weekend: "Saturday – Sunday: 12pm – 11pm"
+    deliveryApps: {
+      headline: "Or order through:",
+      platforms: [
+        { name: "Uber Eats", icon: "uber-eats" },
+        { name: "DoorDash", icon: "doordash" },
+        { name: "Grubhub", icon: "grubhub" }
+      ]
     },
-    serviceArea: "Delivering across Downtown, Midtown, and surrounding neighborhoods"
+    serviceHours: {
+      headline: "Service Hours",
+      schedule: [
+        { days: "Monday - Friday", hours: "11:00 AM - 10:00 PM" },
+        { days: "Saturday - Sunday", hours: "12:00 PM - 11:00 PM" }
+      ]
+    }
   },
 
   footer: {
-    tagline: "Restaurant-quality meals, delivered fast",
-    social: [
-      { platform: "Instagram", url: "#", icon: "instagram" },
-      { platform: "Facebook", url: "#", icon: "facebook" },
-      { platform: "Twitter", url: "#", icon: "twitter" }
+    tagline: "Chef-driven delivery, no dining room markup",
+    links: [
+      { label: "Menu", href: "#menu" },
+      { label: "How It Works", href: "#how-it-works" },
+      { label: "Partnership", href: "#partnership" }
     ],
-    legal: [
-      { label: "Privacy Policy", url: "#" },
-      { label: "Terms of Service", url: "#" },
-      { label: "Allergen Info", url: "#" }
+    social: [
+      { platform: "Instagram", url: "https://instagram.com" },
+      { platform: "Facebook", url: "https://facebook.com" }
     ],
     copyright: `© ${new Date().getFullYear()} Cloud Kitchen. All rights reserved.`
   }
