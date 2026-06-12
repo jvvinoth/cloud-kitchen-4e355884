@@ -29,6 +29,13 @@ export interface DeliveryPlatform {
   logo: string;
 }
 
+export interface PartnershipSection {
+  title: string;
+  description: string;
+  icon: string;
+  cta: string;
+}
+
 export const siteContent = {
   businessName: "Cloud Kitchen",
   
@@ -76,7 +83,7 @@ export const siteContent = {
         price: 18,
         category: "Appetizer" as const,
         dietaryTags: ["Gluten-free"],
-        image: "https://www.inspiredtaste.net/wp-content/uploads/2018/08/Pan-Seared-Scallops-Recipe-1200.jpg"
+        image: "https://images.unsplash.com/photo-1633504581786-316c8002b1b9?auto=format&fit=crop&w=1600&q=80"
       },
       {
         id: "2",
@@ -241,60 +248,76 @@ export const siteContent = {
     sections: [
       {
         title: "Delivery Platforms",
-        description: "Find us on Uber Eats, DoorDash, and Grubhub. Full menu available with real-time updates and accurate prep times."
+        description: "Find us on Uber Eats, DoorDash, and Grubhub. Full menu available with real-time updates.",
+        icon: "smartphone",
+        cta: "Learn more"
       },
       {
         title: "Corporate Catering",
-        description: "Weekly meal programs for offices and teams. Volume discounts and customizable menus available."
+        description: "Weekly meal programs for offices. Custom menus, dietary accommodations, reliable scheduling.",
+        icon: "briefcase",
+        cta: "Get started"
       },
       {
         title: "White-Label Kitchen",
-        description: "Licensed commercial kitchen space available for restaurants without delivery infrastructure. We handle prep, packaging, and logistics."
+        description: "We operate ghost kitchen brands for established restaurants. Full menu development and fulfillment.",
+        icon: "users",
+        cta: "Partner with us"
       }
-    ],
-    cta: {
-      label: "Discuss Partnership",
-      whatsappNumber: "1234567890",
-      whatsappMessage: "Hi, I'm interested in partnership opportunities with Cloud Kitchen"
-    }
+    ] as PartnershipSection[]
   },
 
   contact: {
-    headline: "Ready to order?",
-    subtext: "Message us on WhatsApp or find us on your favorite delivery platform",
-    whatsappCta: {
-      label: "Order on WhatsApp",
+    headline: "Get in touch",
+    subtext: "Ready to order or have questions about our service? We're here to help.",
+    whatsapp: {
       number: "1234567890",
-      message: "Hi, I'd like to order from your menu"
+      message: "Hi, I'd like to know more about Cloud Kitchen",
+      label: "Order on WhatsApp"
     },
-    deliveryApps: {
-      headline: "Or order through:",
-      platforms: [
-        { name: "Uber Eats", icon: "uber-eats" },
-        { name: "DoorDash", icon: "doordash" },
-        { name: "Grubhub", icon: "grubhub" }
-      ]
+    email: "hello@cloudkitchen.com",
+    phone: "(123) 456-7890",
+    hours: {
+      weekday: "Mon - Fri: 11:00 AM - 10:00 PM",
+      weekend: "Sat - Sun: 12:00 PM - 11:00 PM"
     },
-    serviceHours: {
-      headline: "Service Hours",
-      schedule: [
-        { days: "Monday - Friday", hours: "11:00 AM - 10:00 PM" },
-        { days: "Saturday - Sunday", hours: "12:00 PM - 11:00 PM" }
-      ]
-    }
+    serviceArea: "Downtown, Midtown, and surrounding neighborhoods",
+    deliveryInfo: "30-minute delivery within our service area"
   },
 
   footer: {
-    tagline: "Chef-driven delivery, no dining room markup",
-    links: [
-      { label: "Menu", href: "#menu" },
-      { label: "How It Works", href: "#how-it-works" },
-      { label: "Partnership", href: "#partnership" }
-    ],
+    tagline: "Restaurant-quality meals, delivered fast",
+    copyright: "© 2024 Cloud Kitchen. All rights reserved.",
     social: [
-      { platform: "Instagram", url: "https://instagram.com" },
-      { platform: "Facebook", url: "https://facebook.com" }
+      {
+        platform: "Instagram",
+        icon: "instagram",
+        url: "https://instagram.com"
+      },
+      {
+        platform: "Facebook",
+        icon: "facebook",
+        url: "https://facebook.com"
+      },
+      {
+        platform: "Twitter",
+        icon: "twitter",
+        url: "https://twitter.com"
+      }
     ],
-    copyright: `© ${new Date().getFullYear()} Cloud Kitchen. All rights reserved.`
+    legal: [
+      {
+        label: "Privacy Policy",
+        url: "/privacy"
+      },
+      {
+        label: "Terms of Service",
+        url: "/terms"
+      },
+      {
+        label: "Cookie Policy",
+        url: "/cookies"
+      }
+    ]
   }
 };
